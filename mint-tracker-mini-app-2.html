@@ -414,7 +414,7 @@
         <h3>NFT art</h3>
         <span class="count">2 pictures</span>
       </div>
-      <div id="art-row" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 12px"></div>
+      <div id="art-row" style="display:flex;justify-content:space-between;margin:0 12px"></div>
 
       <div class="how">
         <p><strong>Traders &amp; collectors:</strong> tap any mint, hit Track, and get beeped before it drops &mdash; 1 day before, 1 hour before, and at launch &mdash; in the Telegram bot.</p>
@@ -1428,7 +1428,7 @@
           var row = document.getElementById("art-row");
           if (!row) return;
           row.innerHTML = ANIMAL_ART.map(function(a){
-            return '<figure style="margin:0"><img src="' + a.img + '" alt="' + esc(a.name) + '" style="width:100%;border-radius:14px;display:block" /><figcaption style="font-size:12px;color:var(--muted);text-align:center;margin-top:4px">' + esc(a.name) + ' \u00b7 animal art</figcaption></figure>';
+            return '<figure style="margin:0"><img src="' + a.img + '" alt="' + esc(a.name) + '" style="width:64px;height:64px;border-radius:12px;display:block;object-fit:cover" /><figcaption style="font-size:11px;color:var(--muted);text-align:center;margin-top:4px">' + esc(a.name) + '</figcaption></figure>';
           }).join("");
         }
 
